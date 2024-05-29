@@ -19,7 +19,7 @@ let handler = async (m, { conn, command, text }) => {
 `
 conn.reply(m.chat, personalidad, m, { mentions: conn.parseMention(personalidad) })
 }
-handler.help = ['personalidad *<nombre>*']
+handler.help = ['شخصية']
 handler.tags = ['fun']
 handler.command = /^شخصية|الشخصيه|الشخصية|شخصيه/i
 
