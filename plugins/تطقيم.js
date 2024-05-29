@@ -9,8 +9,8 @@ let handler = async (m, { conn }) => {
   let ciwi = await(await fetch(cita.cewe)).buffer()
   await conn.sendFile(m.chat, ciwi, '', '♀️بنت', m)
 }
-handler.help = ['تطقيم]
-handler.tags = ['fun']
+handler.help = ['تطقيم']
+handler.tags = [ 'fun' ]
 handler.command = ['تطقيم','طقم'] 
 
 
