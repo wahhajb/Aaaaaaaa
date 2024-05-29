@@ -223,7 +223,7 @@ default:
 if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
 throw false
 }
-conn.sendButton2(m.chat, `🗂️ خيار: ${type} 
+conn.sendButton(m.chat, `🗂️ خيار: ${type} 
 🎚️ الحالة: ${isEnable ? 'مفعل' : 'معطل'}
 📣 ل: ${isAll ? 'البوت ده' : isUser ? '' : 'الشات ده'}`, author, null, [[`${isEnable ? '✖️ تعطيل ✖️' : '✔️ تنشيط ✔️'}`, `${isEnable ? `#disable ${type}` : `#enable ${type}`}`]], m)}
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
