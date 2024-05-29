@@ -1,7 +1,7 @@
 let handler  = async (m, { conn }) => { 
  let name = conn.getName(m.sender) 
  let teks = ` 
- ${pickRandom([`*🌷🎇 « أذڪـــــــــار المســـــــــاء »🎇🌷*
+ ${pickRandom([`*🎇 « أذڪـــــــــار المســـــــــاء »🎇*
 
 *•┈┈┈••●◆❁✿❁◆●••┈┈┈•*
 
@@ -139,9 +139,7 @@ let handler  = async (m, { conn }) => {
 
 *من قالها حُطَّت خطاياه وإن كانت مثل زبد البحر ..*
 
-            🌇🌇🌇🌇🌇🌇🌇🌇
-
-    *🌠🌷🎇مساكم الله بالخير 🎇🌷🌠*`])} 
+          🌇🌇🌇🌇🌇🌇🌇🌇`])} 
  `.trim() 
  conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }}) 
  }
