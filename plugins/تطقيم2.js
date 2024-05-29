@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['تطقيم2']
 handler.tags = ['fun']
-handler.command = /^2طقم2|تطقيم$/i
+handler.command = /^طقم2|2تطقيم$/i
 handler.limit = true
 
 export default handler
