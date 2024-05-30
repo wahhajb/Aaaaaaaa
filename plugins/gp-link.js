@@ -6,9 +6,9 @@ let handler = async (m, { conn, groupMetadata }) => {
 //conn.sendHydrated(m.chat, `\n${mssg.linkGp} *${groupMetadata.subject}*\n\n${link}`, packname, null, 'https://www.whatsapp.com/otp/copy/https://chat.whatsapp.com/' + await conn.groupInviteCode(m.chat), 'Copiar', null, null, [ null ], m)
 
 }
-handler.help = ['link']
+handler.help = ['رابط']
 handler.tags = ['group']
-handler.command = ['linkgroup', 'link'] 
+handler.command = ['رابط'] 
 handler.group = true
 handler.botAdmin = true
 
