@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   m.reply(data.result)
   }
 handler.help = ['بوت']
-handler.tags = ['بوت']
+handler.tags = ['ai']
 handler.command = /^(بوت|openai|تحدث)$/i
 handler.limit = false
 
