@@ -230,8 +230,8 @@ m.reply(`
 `.trim()) 
 
 }
-handler.help = ['en', 'dis'].map(v => v + 'able <option>')
-handler.tags = ['nable']
+handler.help = []
+handler.tags = []
 handler.command = /^((an|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
 
 export default handler
