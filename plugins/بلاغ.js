@@ -7,7 +7,7 @@ conn.reply('967733772709@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks
 conn.reply('@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, { contextInfo: { mentionedJid: [m.sender] }})
 m.reply(`*[ ✔️ ] تم إبلاغ المطور و انشاء الله يكون ف خدمتك في أسرع وقت 🤍*`)
 }
-handler.help = ['بلاغ'].map(v => v + ' <teks>')
+handler.help = ['بلاغ']
 handler.tags = ['group']
 handler.command = /^(report|بلاغ|بلغ|ابلاغ|bug|report-owner|reportes)$/i
 export default handler
