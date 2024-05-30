@@ -18,7 +18,7 @@ conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, 
 
 }
 handler.help = ['منشن']
-handler.tags = ['grupo']
+handler.tags = ['group']
 handler.command = /^(منشن|invocar|invocacion|todos|invocación)$/i
 
 handler.botAdmin = true
