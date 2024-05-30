@@ -1,15 +1,27 @@
+var handler = async(m, { isOwner, isAdmin, conn, text, participants, args, command, usedPrefix }) => {
 
-let handler = async (m, { conn, text, participants}) => {
-	
-    let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
-    if (!m.quoted) throw `✳️ ${mssg.reply}`
-    conn.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: users } )
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
 }
 
-handler.help = ['منشن']
-handler.tags = ['group']
-handler.command = /^(منشن|tag)$/i
+let pesan = args.join` `
+let oi = `يتم استدعائكم: ${pesan}`
+let teks = `🚩 *حضور*\n\n${oi}\n\n`
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let mentionedJid = [who]
+let username = conn.getName(who)
+for (let username of participants) {
+teks += `• @${username.id.split('@')[0]}\n`}
 
+conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
+
+}
+handler.help = ['منشن']
+handler.tags = ['grupo']
+handler.command = /^(منشن|invocar|invocacion|todos|invocación)$/i
+
+handler.botAdmin = true
 handler.admin = true
 handler.group = true
 
