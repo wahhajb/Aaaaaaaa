@@ -19,24 +19,23 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 ▢ *🪢 ${mssg.gpConf}:*
 • 📮 *Welcome:* ${welcome ? '✅' : '❎'}
 • ❕ *Detect:* ${detect ? '✅' : '❎'}
-• 🔞 *Nsfw:* ${nsfw ? '✅' : '❎'}
 • 🚨 *Anti Link Wha:* ${antiLink ? '✅' : '❎'}
 • 🧬 *Captcha:* ${captcha ? '✅' : '❎'}
 • 📑 *Document:* ${useDocument ? '✅' : '❎'}
 
 *▢  📬 ${mssg.gpConfMsg}:*
-• *Welcome:* ${sWelcome}
-• *Bye:* ${sBye}
+• *الترحيب:* ${sWelcome}
+• *المغادرة:* ${sBye}
 
 ▢ *📌${mssg.desc}* :
-   • ${groupMetadata.desc?.toString() || 'desconocido'}
+   • ${groupMetadata.desc?.toString() || 'لا يوجد'}
 `.trim()
     conn.sendFile(m.chat, pp, 'pp.jpg', text, m)
 }
 
-handler.help = ['infogp']
+handler.help = ['معلومات_الجروب']
 handler.tags = ['group']
-handler.command = ['infogrupo', 'groupinfo', 'infogp'] 
+handler.command = ['infogrupo', 'groupinfo', 'infogp','معلومات_الجروب'] 
 handler.group = true
 
 export default handler
