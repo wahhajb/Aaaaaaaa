@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
 	 let chat = global.db.data.chats[m.chat]
 	 m.react(rwait) 
 	
-	 let q = args[1] || '360p'
+	 let q = args[1] || '720p'
  try {
 		const yt = await fg.ytv(args[0], q)
 		let { title, dl_url, quality, size, sizeB } = yt
@@ -17,8 +17,8 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
      await conn.loadingMsg(m.chat, '📥 جاري التحميل', ` ${isLimit ? `≡  *𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄*\n\n▢ *⚖️${mssg.size}*: ${size}\n▢ *🎞️${mssg.quality}*: ${quality}\n\n▢ _${mssg.limitdl}_ *+${limit} MB*` : '✅ تم التحميل' }`, ["▬▭▭▭▭▭", "▬▬▭▭▭▭", "▬▬▬▭▭▭", "▬▬▬▬▭▭", "▬▬▬▬▬▭", "▬▬▬▬▬▬"], m)
      
 	  if(!isLimit) conn.sendFile(m.chat, dl_url, title + '.mp4', `
- ≡  *𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄*
-  
+*•┈┈••●◆♪ 𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄 ♪◆●••┈┈•*
+
 *📌العنوان:* ${title}
 *🎞️الدقة:* ${quality}
 *⚖️الحجم:* ${size}
@@ -35,7 +35,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
   await conn.loadingMsg(m.chat, '📥 جاري التحميل', ` ${isLimit ? `≡  *𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄*\n\n▢ *⚖️الحجم*: ${size}\n▢ *🎞️الدقة*: ${quality}\n\n▢ _${mssg.limitdl}_ *+${limit} MB*` : '✅ تم التحميل' }`, ["▬▭▭▭▭▭", "▬▬▭▭▭▭", "▬▬▬▭▭▭", "▬▬▬▬▭▭", "▬▬▬▬▬▭", "▬▬▬▬▬▬"], m)
 	  
 if(!isLimit) conn.sendFile(m.chat, dl_url, title + '.mp4', `
- ≡  *𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄*
+*•┈┈••●◆♪ 𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄 ♪◆●••┈┈•*
   
 ▢ *📌العنوان* : ${title}
 *🎞️الدقة:* ${quality}
