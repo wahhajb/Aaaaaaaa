@@ -216,17 +216,17 @@ const listMessage = {
       throw false
   }
   conn.sendButton2(m.chat, `
-≡ *OPTIONS*
+≡ *خيارات*
 ┌───────────
 ▢ 🗂️ *Type:* ${type} 
 ▢ ⚙️ *Condition:* ${isEnable ? 'تفعيل ✅' : 'الغاء التفعيل 🔴'}
-▢ 🏮 *For:* ${isAll ? 'this bot' : isUser ? '' : 'this chat'}
+▢ 🏮 *For:* ${isAll ? 'لهذا البوت' : isUser ? '' : 'لهذا البوت'}
 └───────────
-`, mssg.ig, null, [[`${isEnable ? '🔴 الغاء التفعيل' : '✅ تفعيل'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['⦙☰ القائمة', `${usedPrefix}menu`]],m)
+`, mssg.ig, null, [[`${isEnable ? '🔴 الغاء التفعيل' : '✅ تفعيل'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['⦙☰ القائمة', `${usedPrefix}اوامر`]],m)
 
 
 m.reply(`
-✅ *${type}* Now *${isEnable ? 'Active' : 'Deactive'}* ${isAll ? 'for this bot' : isUser ? '' : 'for this bot'}
+✅ *${type}* الان *${isEnable ? 'مفعل' : 'غير مفعل'}* ${isAll ? 'لهذا البوت' : isUser ? '' : 'لهذا البوت'}
 `.trim()) 
 
 }
