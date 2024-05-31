@@ -30,7 +30,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         });
     }
 
-    await conn.sendList(m.chat, '  ≡ *𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄*🔎', `\n 📀 النتيجة:\n *${text}*`, `اضغط هنا`, ytres[0].image, listSections, m);
+    await conn.sendList(m.chat, '*•┈┈••●◆♪ 𝑴𝒊𝒓𝒛𝒂 𝑴𝒖𝒔𝒊𝒄 ♪◆●••┈┈•*', `\n 📀 النتيجة:\n *${text}*`, `اضغط هنا`, ytres[0].image, listSections, m);
 };
 
 handler.help = ['شغل2']
