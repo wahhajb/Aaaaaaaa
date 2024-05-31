@@ -26,7 +26,7 @@ const sections = [
 
 const listMessage = {
   text: '\nHere is a list of what you can turn on and off',
-  footer: rcanal,
+  footer: mssg.ig,
   title: `≡ List of options`,
   buttonText: "Click here",
   sections
