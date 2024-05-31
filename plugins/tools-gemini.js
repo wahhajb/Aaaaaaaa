@@ -15,7 +15,7 @@ m.react('💬')
 
 }
 handler.help = ['جيمني']; 
-handler.tags = ['tools'];
+handler.tags = ['ai'];
 handler.command = ['جيمني'];
 
 export default handler;
