@@ -8,7 +8,7 @@ let handler = async (_0x4f9075, {
 }) => {
   if (!text && !(_0x4f9075.quoted && _0x4f9075.quoted.text)) {
     // Fix Arabic error message
-    throw "*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*\n\n*⤺┇ استخدام .ميرزا ثم ضع رساله للرد عليها.*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*";
+    throw "*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*\n\n*⤺┇ استخدم .ميرزا ثم ضع رساله للرد عليها.*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*";
   }
   try {
     const encodedText = encodeURIComponent(text);
