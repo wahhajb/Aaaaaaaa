@@ -26,7 +26,7 @@ let handler = async (m, {
             })
 
     } catch (e) {
-        throw eror
+        throw 
     }
 }
 handler.help = ["تخيل"]
