@@ -210,8 +210,8 @@ const listMessage = {
 ▢ grouponly
 └─────────────
 *📌 Example :*
-*${usedPrefix}on* welcome
-*${usedPrefix}off* welcome
+*${usedPrefix}on* مرحباً
+*${usedPrefix}off* مرحباً
 `)
       throw false
   }
