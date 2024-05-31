@@ -6,9 +6,9 @@ let handler = async (m, { conn, text, isROwner, isOwner }) => {
     m.reply(`✅ ${mssg.welMsgOn}`)
   } else throw `✳️ ${mssg.welMsg}`
 }
-handler.help = ['setwelcome']
+handler.help = ['تعديل الترحيب']
 handler.tags = ['group']
-handler.command = ['setwelcome'] 
+handler.command = ['تعديل الترحيب'] 
 handler.admin = true
 handler.owner = false
 
