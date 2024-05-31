@@ -188,31 +188,6 @@ const listMessage = {
       break
       
     default:
-     if (!/[01]/.test(command)) return m.reply(`
-≡ List of options
-
-┌─⊷ *ADMIN*
-▢ welcome
-▢ antilink
-▢ nsfw
-▢ onlyenglish
-▢ autosticker
-▢ detect
-▢ antidelete
-└───────────── 
-┌─⊷ *USERS*
-▢ autolevelup
-▢ chatbot 
-└─────────────
-┌─⊷ *OWNER*
-▢ public
-▢ onlydm
-▢ grouponly
-└─────────────
-*📌 Example :*
-*${usedPrefix}on* مرحباً
-*${usedPrefix}off* مرحباً
-`)
       throw false
   }
   conn.sendButton2(m.chat, `
