@@ -17,6 +17,6 @@ m.react('💬')
 }
 handler.help = ['بوت <ادخل النص>']; 
 handler.tags = ['tools'];
-handler.command = ['ia', 'ai', 'chatgpt', 'openai', 'gpt'];
+handler.command = ['ia', 'ai', 'بوت', 'openai', 'gpt'];
 
 export default handler;
