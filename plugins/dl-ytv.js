@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
 	 let chat = global.db.data.chats[m.chat]
 	 m.react(rwait) 
 	
-	 let q = args[1] || '720p'
+	 let q = args[1] || '360p' ,'480p', '720p'
  try {
 		const yt = await fg.ytv(args[0], q)
 		let { title, dl_url, quality, size, sizeB } = yt
