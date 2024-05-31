@@ -14,8 +14,8 @@ m.react('💬')
 	}
 
 }
-handler.help = ['gemini <text>']; 
+handler.help = ['جيمني']; 
 handler.tags = ['tools'];
-handler.command = ['gemini'];
+handler.command = ['جيمني'];
 
 export default handler;
