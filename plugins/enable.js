@@ -219,10 +219,10 @@ const listMessage = {
 ≡ *OPTIONS*
 ┌───────────
 ▢ 🗂️ *Type:* ${type} 
-▢ ⚙️ *Condition:* ${isEnable ? 'Active ✅' : 'Deactive 🔴'}
+▢ ⚙️ *Condition:* ${isEnable ? 'تفعيل ✅' : 'الغاء التفعيل 🔴'}
 ▢ 🏮 *For:* ${isAll ? 'this bot' : isUser ? '' : 'this chat'}
 └───────────
-`,rcanal, null, [[`${isEnable ? '🔴 Deactive' : '✅ Active'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['⦙☰ Menu', `${usedPrefix}help`]],m)
+`, mssg.ig, null, [[`${isEnable ? '🔴 الغاء التفعيل' : '✅ تفعيل'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['⦙☰ القائمة', `${usedPrefix}menu`]],m)
 
 
 m.reply(`
