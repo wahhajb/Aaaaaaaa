@@ -1,5 +1,5 @@
-import _0x3ec5fb from  node-fetch ;
-import _0xdcffbe from  ../lib/uploadImage.js ;
+import _0x3ec5fb from 'node-fetch';
+import _0xdcffbe from '../lib/uploadImage.js';
 let handler = async (_0x4f9075, {
   text: text,
   conn: conn,
@@ -8,17 +8,17 @@ let handler = async (_0x4f9075, {
 }) => {
   if (!text && !(_0x4f9075.quoted && _0x4f9075.quoted.text)) {
     // Fix Arabic error message
-    throw "*鉂嗏攣鈹佲攣鈺愨彛鈯梆煢団姳鈴ｂ晲鈹佲攣鈹佲潌*\n\n*馃猡衡攪 丕爻鬲禺丿丕賲 禺丕胤亍 囟毓 乇爻丕賱賴 賱賱乇丿 毓賱賷賴丕.*\n\n*鉂嗏攣鈹佲攣鈺愨彛鈯梆煢団姳鈴ｂ晲鈹佲攣鈹佲潌*";
+    throw "*❆━━━═⏣⊰🦇⊱⏣═━━━❆*\n\n*🦇⤺┇ استخدام خاطء ضع رساله للرد عليها.*\n\n*❆━━━═⏣⊰🦇⊱⏣═━━━❆*";
   }
   try {
     const encodedText = encodeURIComponent(text);
     let attachment = null;
-    let mediaURL =   ;
+    let mediaURL = '';
     let quotedMessage = _0x4f9075.quoted ? _0x4f9075.quoted : _0x4f9075;
-    if ((quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType ||   ) {
-      let mimeType = (quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType ||   ;
-      if (mimeType.startsWith( video/ )) {
-        return _0x4f9075.reply("*鉂嗏攣鈹佲攣鈺愨彛鈯梆煢団姳鈴ｂ晲鈹佲攣鈹佲潌*\n\n*馃猡衡攪 賷乇噩賶 丕賱乇丿 毓賱賶 氐賵乇丞貙 賱丕 賮賷丿賷賵!*\n\n*鉂嗏攣鈹佲攣鈺愨彛鈯梆煢団姳鈴ｂ晲鈹佲攣鈹佲潌*");
+    if ((quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '') {
+      let mimeType = (quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '';
+      if (mimeType.startsWith('video/')) {
+        return _0x4f9075.reply("*❆━━━═⏣⊰🦇⊱⏣═━━━❆*\n\n*🦇⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*❆━━━═⏣⊰🦇⊱⏣═━━━❆*");
       }
       attachment = await quotedMessage.download();
       let isImage = /image\/(png|jpe?g|gif)/.test(mimeType);
@@ -33,10 +33,10 @@ let handler = async (_0x4f9075, {
   } catch (error) {
     console.error("Error:", error);
     // Fix Arabic error message
-    throw "*鉂嗏攣鈹佲攣鈺愨彛鈯梆煢団姳鈴ｂ晲鈹佲攣鈹佲潌*\n\n*馃猡衡攪 丕賷乇賵乇 賷丨亘*\n\n*鉂嗏攣鈹佲攣鈺愨彛鈯梆煢団姳鈴ｂ晲鈹佲攣鈹佲潌*";
+    throw "*❆━━━═⏣⊰🦇⊱⏣═━━━❆*\n\n*🦇⤺┇ ايرور يحب*\n\n*❆━━━═⏣⊰🦇⊱⏣═━━━❆*";
   }
 };
-handler.help = ["دحيح"];
-handler.tags = [ "ai"];
-handler.command = ["丕賱賵賰丕乇丿", "googlegenai", "gemini",  噩賷賲賷賳丕賷 , "丿丨賷丨"];
+handler.help = ["googlegenai"];
+handler.tags = ['AI'];
+handler.command = ["الوكارد", "googlegenai", "gemini", 'جيميناي', "دحيح"];
 export default handler;
