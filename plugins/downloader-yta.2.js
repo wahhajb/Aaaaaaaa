@@ -4,7 +4,7 @@ const handler = async (m, {conn, args}) => {
   if (!args[0]) throw '🌺 اكتب الرابط';
   m.react(rwait)
   try {
-    const q = '256kbps';
+    const q = '128kbps';
     const v = args[0];
     const yt = await youtubedl(v).catch(async (_) => await youtubedlv2(v));
     const dl_url = await yt.audio[q].download();
