@@ -26,7 +26,7 @@ let handler = async (m, {
             })
 
     } catch (e) {
-        throw img
+        throw newArr
     }
 }
 handler.help = ["تخيل"]
