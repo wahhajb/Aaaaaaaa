@@ -188,9 +188,31 @@ const listMessage = {
       break
       
     default:
+    if (!/[01]/.test(command)) return m.reply(`
+    const sections = [
+   {
+	title: `≡ List of options`,
+	rows: [
+	{title: "🔮 | Welcome", rowId: `${usedPrefix + command} welcome`},
+	{title: "🌎 | Public", rowId: `${usedPrefix + command} public`},
+	{title: "🔞 | Nsfw", rowId: `${usedPrefix + command} nsfw`},
+	{title: "🧬 | OnlyEnglish", rowId: `${usedPrefix + command} onlyenglish`},
+	{title: "🔗 | Antilink", rowId: `${usedPrefix + command} antilink`},
+    {title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
+    {title: "🖼 | Autosticker", rowId: `${usedPrefix + command} autosticker`},
+	{title: "⏏️ | Autolevelup", rowId: `${usedPrefix + command} autolevelup`},
+	{title: "🗣️ | ChatBot", rowId: `${usedPrefix + command} chatbot`},
+	{title: "🔎 | Detect", rowId: `${usedPrefix + command} detect`},
+	{title: "📑 | Document", rowId: `${usedPrefix + command} document`},
+	{title: "🛡️ | Restrict", rowId: `${usedPrefix + command} restrict`},
+	{title: "💬 | OnlyPvivate", rowId: `${usedPrefix + command} onlydm`},
+	{title: "👥 | OnlyGroup", rowId: `${usedPrefix + command} onlygp`}
+	]
+    },
+]`)
       throw false
   }
-  conn.sendButton2(m.chat, `
+conn.sendButton2(m.chat, `
 ≡ *خيارات*
 ┌───────────
 ▢ 🗂️ *Type:* ${type} 
