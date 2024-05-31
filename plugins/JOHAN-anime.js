@@ -5,6 +5,6 @@ let haha = await res[Math.floor(res.length * Math.random())]
 conn.sendFile(m.chat, haha, 'error.jpg', `_${command}_`, m)
 //conn.sendButton(m.chat, `_${command}_`.trim(), author, haha, [['🔄 NEXT 🔄', `${usedPrefix + command}`]], m)    
 }
-handler.command = handler.help = ['akira', 'akiyama', 'anna', 'asuna', 'ayuzawa', 'boruto', 'chiho', 'chitoge', 'deidara', 'erza', 'elaina', 'eba', 'emilia', 'hestia', 'hinata', 'inori', 'isuzu', 'itachi', 'itori', 'kaga', 'kagura', 'kaori', 'keneki', 'kotori', 'kurumi', 'madara', 'mikasa', 'miku', 'minato', 'naruto', 'nezuko', 'sagiri', 'sasuke', 'sakura']
-handler.tags = ['anime']
+handler.command = handler.help = ['اكيرا', 'اكيامي', 'آنا', 'اسونا', 'اكيوزاوا', 'بروتو', 'تشيهو', 'تشيتوغ', 'ديدارا', 'ايرزا', 'ايلاينا', 'ايبا', 'ايميليا', 'هيستيا', 'هيناتا', 'اينوري', 'ايسوزو', 'ايتاشي', 'ايتوري', 'كاغا', 'كاغورا', 'كاوري', 'كيناكي', 'كوتوري', 'كورومي', 'مادارا', 'ميكاسا', 'ميكو', 'ميناتو', 'ناروتو', 'نيزوكو', 'ساجيري', 'ساسوكس', 'ساكورا']
+handler.tags = ['anim']
 export default handler
