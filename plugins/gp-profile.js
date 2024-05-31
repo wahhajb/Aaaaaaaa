@@ -36,8 +36,8 @@ let str = `
     m.react(done)
 
 }
-handler.help = ['profile']
+handler.help = ['بروفايلي']
 handler.tags = ['group']
-handler.command = ['profile', 'perfil']
+handler.command = ['profile', 'بروفايلي']
 
 export default handler
