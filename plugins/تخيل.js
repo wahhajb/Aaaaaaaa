@@ -25,9 +25,7 @@ let handler = async (m, {
                 quoted: m
             })
 
-    } catch (e) {
-        throw newArr
-    }
+    } 
 }
 handler.help = ["تخيل"]
 handler.tags = ["ai"]
