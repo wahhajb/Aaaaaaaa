@@ -8,9 +8,9 @@ let handler = async function (m, { conn, text, usedPrefix }) {
   } else throw `✳️ ${mssg.rulesMsg}`
      
 }
-handler.help = ['setrules <text>']
+handler.help = ['تغيير القواعد']
 handler.tags = ['group']
-handler.command = ['setrules', 'addrules', 'addrule'] 
+handler.command = ['setrules', 'تغيير القواعد', 'addrule'] 
 handler.group = true
 handler.admin = true
 
