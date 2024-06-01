@@ -7,7 +7,7 @@ import os from 'os';
 const streamPipeline = promisify(pipeline);
 
 var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `Example: \n ${usedPrefix}${command} midle of night`;
+  if (!text) throw `مثال: \n ${usedPrefix}${command} اكتب الرابط`;
   const url = text.trim();
   let vidInfo = await ytdl.getInfo(url);
   let { videoDetails: { title, thumbnails, lengthSeconds } } = vidInfo;
