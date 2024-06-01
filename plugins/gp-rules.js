@@ -6,8 +6,8 @@ let handler = async function (m, { conn, text, usedPrefix }) {
      m.reply(`📜 *${mssg.gpRules}*\n\n${chat.rules}`)
      
 }
-handler.help = ['rules']
+handler.help = ['القواعد']
 handler.tags = ['group']
-handler.command = ['rules', 'reglas'] 
+handler.command = ['rules', 'القواعد'] 
 
 export default handler
