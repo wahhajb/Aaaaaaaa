@@ -52,9 +52,9 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   }
 };
 
-handler.help = ['<query>'];
-handler.tags = [];
-handler.command = ['mp3', 'songs', 'ytmp3doc', 'اغنيه'];
+handler.help = ['صوت <رابط>'];
+handler.tags = ['dl'];
+handler.command = ['ytmp3', 'songs', 'صوت', 'اغنيه'];
 handler.exp = 0;
 handler.diamond = false;
 
