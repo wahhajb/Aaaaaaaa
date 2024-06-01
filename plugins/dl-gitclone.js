@@ -16,6 +16,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['جيثهب <رابط>']
 handler.tags = ['dl']
 handler.command = ['جيثهب'] 
-handler.diamond = true
+handler.diamond = false
 
 export default handler
