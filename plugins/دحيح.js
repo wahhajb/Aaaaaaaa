@@ -24,7 +24,7 @@ let handler = async (_0x4f9075, {
       let isImage = /image\/(png|jpe?g|gif)/.test(mimeType);
       mediaURL = await (isImage ? _0xdcffbe : _0xdcffbe)(attachment);
     }
-    const endpointURL = mediaURL ? "https://api-darkman-3cf8c6ef66b9.herokuapp.com/googlegenai?query=" + encodedText + "&url=" + mediaURL : "https://api-darkman-3cf8c6ef66b9.herokuapp.com/googlegenai?query=" + encodedText + "&url=";
+    const endpointURL = mediaURL ? "" + encodedText + "&url=" + mediaURL : "" + encodedText + "&url=";
     conn.sendPresenceUpdate("composing", text.chat);
     const response = await _0x3ec5fb(endpointURL);
     const result = await response.json();
