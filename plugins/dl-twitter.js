@@ -17,9 +17,9 @@ m.react(done)
   } 
   
 }
-handler.help = ['twitter'].map(v => v + ' <url>')
+handler.help = ['تويتر <رابط>']
 handler.tags = ['dl']
-handler.command = ['twitter', 'tw', 'x']
-handler.diamond = true
+handler.command = ['twitter', 'تويتر', 'x']
+handler.diamond = false
 
 export default handler
