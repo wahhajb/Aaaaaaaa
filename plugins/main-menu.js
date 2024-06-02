@@ -158,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
                         serverMessageId: -1
                     }
                 }
-            },{ quoted: global.fcontact } , m, null)
+            }, m, null)
   
     m.react('📑') 
     
