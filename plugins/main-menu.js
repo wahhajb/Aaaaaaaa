@@ -135,30 +135,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
     let pp = './src/fg_logo.jpg'
-    let finalText = text || q.text
-    let users = participants.map(u => conn.decodeJid(u.id)) 
-    global.fcontact = {
-        key: {
-            fromMe: false,
-            participant: `0@s.whatsapp.net`,
-            remoteJid:  'status@broadcast' 
-        },
+    
       conn.sendButton2(m.chat, rcanal, text.trim(), `▢ 𝑴𝒊𝒓𝒛𝒂 ┃ ᴮᴼᵀ\n${mssg.ig}`, pp [
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
     ], m, rpl)
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), { 
-                text: finalText,
-                contextInfo: {
-                    mentionedJid: users,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363272493503323@newsletter',
-                        newsletterName: global.author,
-                        serverMessageId: -1
-                    }
-                }
-            }, m, null)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null)
   
     m.react('📑') 
     
