@@ -134,18 +134,13 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let pp = './src/fg_logo.jpg',
-    
-    contextInfo: {
-        mentionedJid: [m.sender],
-        isForwarded: false,
-    },
+    let pp = './src/fg_logo.jpg'
 
       conn.sendButton2(m.chat, rcanal, text.trim(), `▢ 𝑴𝒊𝒓𝒛𝒂 ┃ ᴮᴼᵀ\n${mssg.ig}`, pp [
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
     ], m, rpl)
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), @${who.replace( @s.whatsapp.net ,   )}, m, null)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null)
   
     m.react('📑') 
     
