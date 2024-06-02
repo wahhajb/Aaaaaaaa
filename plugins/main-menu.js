@@ -135,33 +135,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
     let pp = './src/fg_logo.jpg'
-    
-    let users = participants.map(u => conn.decodeJid(u.id))
-    let q = m.quoted ? m.quoted : m || m.text || m.sender
-    let c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender
-    let messageType = m.quoted ? q.mtype :  extendedTextMessage 
-    let messageContent = m.quoted ? c.message[q.mtype] ?? {} : { text:    || c }
-    let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender; // تعريف المتغير who
-
-    if (!(who in global.db.data.users)) throw `✳️ لم يتم العثور على المستخدم في قاعدة البيانات`; // فحص ما إذا كان المستخدم موجودًا في قاعدة البيانات
-
-    let { name } = global.db.data.users[who]; // تعريف المتغير name من قاعدة البيانات
-
-    global.fcontact = {
-        key: {
-            fromMe: false,
-            participant: `0@s.whatsapp.net`,
-            remoteJid:  status@broadcast 
-        },
-        message: {
-            contactMessage: {
-                displayName: `${name}`,
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split( @ )[0]}:${m.sender.split( @ )[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
-            }
-        }
-    }
-  
-   let finalText = text || q.text
      
       //conn.sendButton2(m.chat, rcanal, text.trim(), `▢ 𝑴𝒊𝒓𝒛𝒂 ┃ ᴮᴼᵀ\n${mssg.ig}`, pp [
       ['⏍ معلومات البوت', `${_p}botinfo`],
@@ -171,25 +144,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   
     m.react('📑') 
     
-  await conn.sendMessage(
-            m.chat,
-            { 
-                text: finalText,
-                contextInfo: {
-                    mentionedJid: users,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid:  120363272493503323@newsletter ,
-                        newsletterName: global.author,
-                        serverMessageId: -1
-                    }
-                }
-            },
-            { quoted: global.fcontact }
-        )
-    }
-}
-  } catch (e) {
+    } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
     throw e
   }
