@@ -141,7 +141,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         key: {
             fromMe: false,
             participant: `0@s.whatsapp.net`,
-            remoteJid:  status@broadcast 
+            remoteJid:  'status@broadcast' 
         },
       conn.sendButton2(m.chat, rcanal, text.trim(), `▢ 𝑴𝒊𝒓𝒛𝒂 ┃ ᴮᴼᵀ\n${mssg.ig}`, pp [
       ['⏍ معلومات البوت', `${_p}botinfo`],
