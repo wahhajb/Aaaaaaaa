@@ -140,7 +140,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
     ], m, rpl)
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), null, m)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), null, m, rcanal)
   
     m.react('📑') 
     
