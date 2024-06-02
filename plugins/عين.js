@@ -7,9 +7,8 @@ let handler = async (m, { conn, command, usedPrefix }) => {
         conn.reply(m.chat, '❐┃لم يتم الاجابة علي السؤال بعد┃❌ ❯', conn.tebakbendera[id][0])
         throw false
     }
-    let src = './src/eye.json'
-  let json = src[Math.floor(Math.random() * src.length)]
-    let caption = `*${command.toUpperCase()}*
+    let tekateki = JSON.parse(fs.readFileSync(`./src/eye.json`));
+    let json = tekateki[Math.floor(Math.random() * tekateki.length)];    let caption = `*${command.toUpperCase()}*
   ❐↞┇الـوقـت⏳↞ *${(timeout / 1000).toFixed(2)} ┇
   *استخدم .انسحب للأنسحاب*
   ❐↞┇الـجـائـزة💰↞ ${poin} نقاط┇
