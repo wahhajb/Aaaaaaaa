@@ -134,8 +134,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let pp = './src/fg_logo.jpg'
-    },
+    let pp = './src/fg_logo.jpg',
+    
     contextInfo: {
         mentionedJid: [m.sender],
         isForwarded: false,
