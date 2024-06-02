@@ -137,7 +137,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let pp = './src/fg_logo.jpg'
     let finalText = text || q.text
     let users = participants.map(u => conn.decodeJid(u.id)) 
-     
+    global.fcontact = {
+        key: {
+            fromMe: false,
+            participant: `0@s.whatsapp.net`,
+            remoteJid:  status@broadcast 
+        },
       conn.sendButton2(m.chat, rcanal, text.trim(), `▢ 𝑴𝒊𝒓𝒛𝒂 ┃ ᴮᴼᵀ\n${mssg.ig}`, pp [
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
@@ -153,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
                         serverMessageId: -1
                     }
                 }
-            }, m, null)
+            },{ quoted: global.fcontact } , m, null)
   
     m.react('📑') 
     
