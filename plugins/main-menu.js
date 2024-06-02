@@ -140,7 +140,18 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
     ], m, rpl)
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), { 
+                text: finalText,
+                contextInfo: {
+                    mentionedJid: users,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363272493503323@newsletter',
+                        newsletterName: global.author,
+                        serverMessageId: -1
+                    }
+                }
+            }, m, null)
   
     m.react('📑') 
     
