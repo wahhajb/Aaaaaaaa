@@ -139,14 +139,13 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     contextInfo: {
         mentionedJid: [m.sender],
         isForwarded: false,
-        @${who.replace( @s.whatsapp.net ,   )}
     },
 
       conn.sendButton2(m.chat, rcanal, text.trim(), `▢ 𝑴𝒊𝒓𝒛𝒂 ┃ ᴮᴼᵀ\n${mssg.ig}`, pp [
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
     ], m, rpl)
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), @${who.replace( @s.whatsapp.net ,   )}, m, null)
   
     m.react('📑') 
     
