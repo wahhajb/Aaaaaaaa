@@ -141,7 +141,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⏍ معلومات البوت', `${_p}botinfo`],
       ['⌬ الدعم', `${_p}support`]
     ], m, rpl)
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), `mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] +  @s.whatsapp.net ), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] +  @s.whatsapp.net )`, null, m)
+    conn.sendFile(m.chat, pp, 'menu.jpg', {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), null, m )
   
     m.react('📑') 
     
