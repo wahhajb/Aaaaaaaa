@@ -1,5 +1,4 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  // إرسال الصورة أولاً
   let button = await conn.relayMessage(m.chat, {
     viewOnceMessage: {
       message: {
