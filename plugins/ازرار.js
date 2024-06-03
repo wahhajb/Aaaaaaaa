@@ -1,4 +1,4 @@
-const handler = async (m, { conn }) => {
+let handler = async (m, { conn }) => {
   
 const sections = [
 {
