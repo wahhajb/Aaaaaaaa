@@ -4,7 +4,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       message: {
         interactiveMessage: {
           header: {
-            title: "*قـائـمـة الاوامــر*"
+            title: "*قـائـمـة الاوامــر*",
+            image: { url: "https://example.com/logo.png" } // أضف مسار الصورة هنا
           },
           body: {
             text: "🛡️ افتح القائمة بواسطة الزر\n⚡ لا تلعب كثير في القائمة"
