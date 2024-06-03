@@ -106,6 +106,6 @@ await conn.sendAIButton(m.chat, listMessage);
 
 handler.help = ['Buttons']
 handler.tags = ['group']
-handler.command = ['tt']
+handler.command = ['man']
 
 export default handler;
