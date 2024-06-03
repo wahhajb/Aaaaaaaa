@@ -49,7 +49,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
   }, {})
 }
-let photo = await conn.sendFile(m.chat, "https://telegra.ph/file/4d94d11dd060c372ee632.jpg", rcanal, null, m)
+
 handler.help = ["لسته"]
 handler.tags = ["main"]
 handler.command = ["لسته"]
