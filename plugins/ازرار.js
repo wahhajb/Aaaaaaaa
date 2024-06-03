@@ -101,7 +101,7 @@ text: "معلومات",
 footer: "dark man",
 buttons: sections
 };
-await conn.sendButton2(m.chat, listMessage);
+await conn.sendButton(m.chat, listMessage);
 };
 
 handler.help = ['Buttons']
