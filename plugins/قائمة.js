@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   // إرسال الصورة أولاً
-  let photo = await conn.sendbutton(m.chat, "./src/fg_logo.jpg", null, m)
+  let photo = await conn.sendFile(m.chat, "https://telegra.ph/file/4d94d11dd060c372ee632.jpg", null, m)
   let button = await conn.relayMessage(m.chat, {
     viewOnceMessage: {
       message: {
