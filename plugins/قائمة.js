@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   // إرسال الصورة أولاً
-  let button = await conn.relayMessage(m.chat,"https://telegra.ph/file/4d94d11dd060c372ee632.jpg", {
+  let button = await conn.relayMessage(m.chat, {
     viewOnceMessage: {
       message: {
         interactiveMessage: {
@@ -39,7 +39,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                 }),
                 messageParamsJson: "𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕",
                 mediaMessage: {
-                  upload: "photo"
+                  upload: "https://telegra.ph/file/4d94d11dd060c372ee632.jpg"
                 }
               }
             ]
