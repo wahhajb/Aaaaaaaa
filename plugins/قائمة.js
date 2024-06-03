@@ -1,7 +1,7 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   let sections = [
     {
-      title: "𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕",
+      title: "𝐏𝐎𝐓 𝐊𝐀𝐁𝐀𝐒",
       rows: [
         {
           header: "معلومات البوت",
@@ -22,7 +22,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let button = await conn.sendMessage(m.chat, {
     image: { url: "https://telegra.ph/file/4d94d11dd060c372ee632.jpg" },
     caption: "*قـائـمـة الاوامــر*\n\n🛡️ افتح القائمة بواسطة الزر\n⚡ لا تلعب كثير في القائمة",
-    footer: "𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕",
+    footer: "𝐏𝐎𝐓 𝐊𝐀𝐁𝐀𝐒",
     buttons: [
       {
         buttonId: "menu",
