@@ -1,11 +1,11 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
+  let image = await conn.sendFile(m.chat, "https://telegra.ph/file/4d94d11dd060c372ee632.jpg", "image.jpg", "Here is the image", m);
   let button = await conn.relayMessage(m.chat, {
     viewOnceMessage: {
       message: {
         interactiveMessage: {
           header: {
-            title: "*قـائـمـة الاوامــر*",
-            image: { url: "https://telegra.ph/file/4d94d11dd060c372ee632.jpg" } // أضف مسار الصورة هنا
+            title: "*قـائـمـة الاوامــر*"
           },
           body: {
             text: "🛡️ افتح القائمة بواسطة الزر\n⚡ لا تلعب كثير في القائمة"
