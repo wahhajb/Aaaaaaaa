@@ -25,7 +25,7 @@ global.author = 'ڪَباؘسِ丫:١⁶𝑘𝑎𝑝𝑎𝑠'
 
 //--info FG
 global.botName = 'بوت'
-global.fgig = 'https://www.instagram.com/kskk721?igsh=OGQ5ZDc2ODk2ZA==' 
+global.fgig = '*https://tinyurl.com/23xtv4wl*' 
 global.fgsc = 'https://github.com/FG98F/dylux-fg' 
 global.fgyt = 'https://youtube.com/fg98f'
 global.fgpyp = 'https://paypal.me/fg98f'
