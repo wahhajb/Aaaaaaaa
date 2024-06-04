@@ -33,7 +33,7 @@ global.fglog = 'https://i.ibb.co/1zdz2j3/logo.jpgs'
 
 //--- Grupos WA
 global.id_canal = '120363160276571146@newsletter' //-ID de canal de WhatsApp
-global.fgcanal = 'https://whatsapp.com/channel/0029VaaeCWx0G0XghCHtCU1d'
+global.fgcanal = 'https://whatsapp.com/channel/0029VaaLM7m6BIErLz1Xcq3M'
 global.bgp = 'https://whatsapp.com/channel/0029VaaLM7m6BIErLz1Xcq3M'
 global.bgp2 = 'https://whatsapp.com/channel/0029VaaLM7m6BIErLz1Xcq3M'
 global.bgp3 = '' //--GP NSFW
