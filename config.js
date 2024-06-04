@@ -20,12 +20,12 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = '𝑩𝒐𝒕' 
+global.packname = 'ڪَباؘسِ丫:١⁶𝑘𝑎𝑝𝑎𝑠' 
 global.author = 'ڪَباؘسِ丫:١⁶𝑘𝑎𝑝𝑎𝑠' 
 
 //--info FG
 global.botName = 'بوت'
-global.fgig = 'https://instagram.com/rnj_.6' 
+global.fgig = 'https://www.instagram.com/kskk721?igsh=OGQ5ZDc2ODk2ZA==' 
 global.fgsc = 'https://github.com/FG98F/dylux-fg' 
 global.fgyt = 'https://youtube.com/fg98f'
 global.fgpyp = 'https://paypal.me/fg98f'
