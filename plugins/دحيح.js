@@ -33,7 +33,7 @@ let handler = async (_0x4f9075, {
   } catch (error) {
     console.error("Error:", error);
     // Fix Arabic error message
-    throw "*\n\n*⤺┇ حدث خطأ حاول مرة أخرى*\n\n";
+    throw "\n\n*⤺┇ حدث خطأ حاول مرة أخرى*\n\n";
   }
 };
 handler.help = ["بووت"];
