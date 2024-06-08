@@ -18,7 +18,7 @@ let handler = async (_0x4f9075, {
     if ((quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '') {
       let mimeType = (quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '';
       if (mimeType.startsWith('video/')) {
-        return _0x4f9075.reply("*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*\n\n*⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*");
+        return _0x4f9075.reply("*•┈┈┈••●◆ bot kbas ◆●••┈┈┈•*\n\n*⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*");
       }
       attachment = await quotedMessage.download();
       let isImage = /image\/(png|jpe?g|gif)/.test(mimeType);
@@ -36,7 +36,7 @@ let handler = async (_0x4f9075, {
     throw "*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*\n\n*⤺┇ حدث خطأ حاول مرة أخرى*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*";
   }
 };
-handler.help = ["ميرزا"];
+handler.help = ["بووت"];
 handler.tags = ['ai'];
-handler.command = ["ميرزا", "googlegenai", "gemini", 'جيميناي', "دحيح"];
+handler.command = ["بووت", "googlegenai", "gemini", 'جيميناي', "."];
 export default handler;
