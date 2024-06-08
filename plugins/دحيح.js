@@ -8,7 +8,7 @@ let handler = async (_0x4f9075, {
 }) => {
   if (!text && !(_0x4f9075.quoted && _0x4f9075.quoted.text)) {
     // Fix Arabic error message
-    throw "*•┈┈┈••●◆ڪَباؘسِ丫:١ بوت ◆●••┈┈┈•*\n\n*⤺┇ استخدم .بووت ثم ضع رساله للرد عليها.*\n\n*•┈┈┈••●◆ ڪَباؘسِ丫: بوت ◆●••┈┈┈•*";
+    throw "*\n\n*⤺┇  يا حياتي استخدم .بووت ثم ضع رساله للرد عليها.*\n\n*";
   }
   try {
     const encodedText = encodeURIComponent(text);
@@ -18,7 +18,7 @@ let handler = async (_0x4f9075, {
     if ((quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '') {
       let mimeType = (quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '';
       if (mimeType.startsWith('video/')) {
-        return _0x4f9075.reply("*•┈┈┈••●◆ bot kbas ◆●••┈┈┈•*\n\n*⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*•┈┈┈••●◆  ◆●••┈┈┈•*");
+        return _0x4f9075.reply("*\n\n*⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*");
       }
       attachment = await quotedMessage.download();
       let isImage = /image\/(png|jpe?g|gif)/.test(mimeType);
@@ -33,7 +33,7 @@ let handler = async (_0x4f9075, {
   } catch (error) {
     console.error("Error:", error);
     // Fix Arabic error message
-    throw "*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*\n\n*⤺┇ حدث خطأ حاول مرة أخرى*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*";
+    throw "*\n\n*⤺┇ حدث خطأ حاول مرة أخرى*\n\n";
   }
 };
 handler.help = ["بووت"];
