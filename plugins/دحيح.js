@@ -8,7 +8,7 @@ let handler = async (_0x4f9075, {
 }) => {
   if (!text && !(_0x4f9075.quoted && _0x4f9075.quoted.text)) {
     // Fix Arabic error message
-    throw "*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*\n\n*⤺┇ استخدم .ميرزا ثم ضع رساله للرد عليها.*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*";
+    throw "*•┈┈┈••●◆ڪَباؘسِ丫:١ بوت ◆●••┈┈┈•*\n\n*⤺┇ استخدم .بووت ثم ضع رساله للرد عليها.*\n\n*•┈┈┈••●◆ ڪَباؘسِ丫: بوت ◆●••┈┈┈•*";
   }
   try {
     const encodedText = encodeURIComponent(text);
@@ -18,7 +18,7 @@ let handler = async (_0x4f9075, {
     if ((quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '') {
       let mimeType = (quotedMessage.msg || quotedMessage).mimetype || quotedMessage.mediaType || '';
       if (mimeType.startsWith('video/')) {
-        return _0x4f9075.reply("*•┈┈┈••●◆ bot kbas ◆●••┈┈┈•*\n\n*⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*•┈┈┈••●◆ 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕 ◆●••┈┈┈•*");
+        return _0x4f9075.reply("*•┈┈┈••●◆ bot kbas ◆●••┈┈┈•*\n\n*⤺┇ يرجى الرد على صورة، لا فيديو!*\n\n*•┈┈┈••●◆  ◆●••┈┈┈•*");
       }
       attachment = await quotedMessage.download();
       let isImage = /image\/(png|jpe?g|gif)/.test(mimeType);
