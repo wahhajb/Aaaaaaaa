@@ -27,7 +27,7 @@ const handler = async (m, { conn, usedPrefix, command, text }) => {
         externalAdReply: {
           title: data.name,
           body: 'إضغط للمتابعة على إنستجرام',
-          sourceUrl: 'https://instagram.com/rnj_.6',
+          sourceUrl: 'https://instagram.com/yd__l',
           thumbnailUrl: iconUrl, // icon application 
           mediaType: 1, // matbdl walo
           showAdAttribution: true,
