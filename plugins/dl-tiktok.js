@@ -3,7 +3,7 @@ import fg from 'api-dylux'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     
-        if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com/ZMYG92bUh/`
+        if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://www.tiktok.com/@iiioii_/video/7346675926446476562?_r=1&u_code=e9h6d72fj61ga6&preview_pb=0&sharer_language=ar&_d=edjb489bl3e4c1&share_item_id=7346675926446476562&source=h5_m&timestamp=1717954300&user_id=7270210984266220549&sec_user_id=MS4wLjABAAAA0FnXDTsDojKzENK7rJXwnQfiysTv17ibjRIbgfmS52WeIMyGbx6N46ksNGNZSL_s&social_share_type=0&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7361023191681140487&share_link_id=cc6e7dc9-fdde-4b66-ab8c-91e3a13b0744&share_app_id=1233&ugbiz_name=Main&ug_btm=b8727%2Cb2878`
         if (!args[0].match(/tiktok/gi)) throw `❎ ${mssg.noLink('TikTok')}`
         m.react(rwait)
       
