@@ -3,12 +3,12 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url' 
 
 global.owner = [
-  ['967734144053', 'ڪَباؘسِ丫:١⁶𝑘𝑎𝑝𝑎𝑠', true],
-  ['967734144053']
+  ['967773289295', 'كلوفر丫:١⁶𝑘𝑎𝑝𝑎𝑠', true],
+  ['967773289295']
 ] //Numeros de owner 
 
 global.mods = [''] 
-global.prems = ['967734144053', '967734144053']
+global.prems = ['967773289295', '967773289295']
 global.APIs = { // API Prefix
   // name: 'https://website' 
   nrtm: 'https://fg-nrtm.ddns.net',
@@ -21,7 +21,7 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.packname = 'بوت' 
-global.author = 'ڪَباؘسِ丫:١⁶𝑘𝑎𝑝𝑎𝑠' 
+global.author = 'كلوفر丫:١⁶𝑘𝑎𝑝𝑎𝑠' 
 
 //--info FG
 global.botName = 'بوت'
@@ -33,9 +33,9 @@ global.fglog = 'https://i.ibb.co/1zdz2j3/logo.jpgs'
 
 //--- Grupos WA
 global.id_canal = '120363160276571146@newsletter' //-ID de canal de WhatsApp
-global.fgcanal = 'https://whatsapp.com/channel/0029VaaLM7m6BIErLz1Xcq3M'
-global.bgp = 'https://whatsapp.com/channel/0029VaaLM7m6BIErLz1Xcq3M'
-global.bgp2 = 'https://whatsapp.com/channel/0029VaaLM7m6BIErLz1Xcq3M'
+global.fgcanal = 'https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq'
+global.bgp = 'https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq'
+global.bgp2 = 'https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq'
 global.bgp3 = '' //--GP NSFW
 
 global.wait = '⌛ _Cargando..._\n*▬▬▬▭*'
