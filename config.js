@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url' 
 
 global.owner = [
-  ['967773289295', 'كلوفر丫:١⁶𝑘𝑎𝑝𝑎𝑠', true],
+  ['967773289295', 'كلوفر丫:١', true],
   ['967773289295']
 ] //Numeros de owner 
 
@@ -21,7 +21,7 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.packname = 'بوت' 
-global.author = 'كلوفر丫:١⁶𝑘𝑎𝑝𝑎𝑠' 
+global.author = 'كلوفر丫:١' 
 
 //--info FG
 global.botName = 'بوت'
