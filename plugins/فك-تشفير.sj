@@ -1,3 +1,5 @@
+//by : PABLO & SHADOW 
+// Channel : https://whatsapp.com/channel/0029Vaardwo5vKA95jcDWU3P
 function textToBinary(text) {
     return text.split(  ).map(char => {
         return char.charCodeAt(0).toString(2).padStart(8,  0 );
