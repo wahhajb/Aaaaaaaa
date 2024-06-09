@@ -15,12 +15,10 @@ ${bgp}
 ${bgp2}
 
 ◈ ━━━━━━━━━━━━━━━━━━━━ ◈
-▢ *تيليجرام:*
-• https://t.me/MR_X61
  ▢ *إنستغرام:*
-• https://instagram.com/rnj_.6
+• https://instagram.com/yd__l
 ▢ *واتساب:*
-• https://wa.me/qr/S4ONIQ4XJ2N4E1`)
+• https://wa.me/967773289295`)
 
 }
 handler.help = ['الدعم']
