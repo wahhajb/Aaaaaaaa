@@ -502,56 +502,85 @@ export async function participantsUpdate({ id, participants, action }) {
         case 'add':
         case 'remove':
             if (chat.welcome) {
-                let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
-                for (let user of participants) {
-                    let pp = 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg'
-                    let ppgp = 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg'
-                    try {
-                        pp = await this.profilePictureUrl(user, 'image')
-                        ppgp = await this.profilePictureUrl(id, 'image')
-                        } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Bienvenido, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Desconocido') :
-                            (chat.sBye || this.bye || conn.bye || 'Adiós, @user')).replace('@user', '@' + user.split('@')[0])
-                         
-                            let wel = API('fgmods', '/api/welcome', {
-                                username: await this.getName(user),
-                                groupname: await this.getName(id),
-                                groupicon: ppgp,
-                                membercount: groupMetadata.participants.length,
-                                profile: pp,
-                                background: 'https://i.ibb.co/fkFmQC2/eve.jpg'
-                            }, 'apikey')
-
-                            let lea = API('fgmods', '/api/goodbye2', {
-                                username: await this.getName(user),
-                                groupname: await this.getName(id),
-                                groupicon: ppgp,
-                                membercount: groupMetadata.participants.length,
-                                profile: pp,
-                                background: 'https://i.ibb.co/jh9367t/akali.jpg'
-                            }, 'apikey')
-
-                            this.sendFile(id, action === 'add' ? wel : lea, 'pp.jpg', text, null, false, { mentions: [user] })
-                            //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
-                            /*this.sendButton(id, text, mssg.ig, action === 'add' ? wel : lea, [
-                             [(action == 'add' ? '⦙☰ MENU' : 'BYE'), (action == 'add' ? '/help' : 'khajs')], 
-                             [(action == 'add' ? '⏍ RULES' : 'ッ'), (action == 'add' ? '/rules' : ' ')] ], null, {mentions: [user]})*/
-                          
-                    }
+              let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata;
+              for (let user of participants) {
+                let pp, ppgp;
+                try {
+                  pp = await this.profilePictureUrl(user, 'image');
+                  ppgp = await this.profilePictureUrl(id, 'image');
+                } catch (error) {
+                  console.error(`حدث خطأ أثناء استرداد الصورة الشخصية: ${error}`);
+                  pp = 'https://telegra.ph/file/d37b343ee8f981be6ffba.jpg'; // Assign default image URL
+                  ppgp = 'https://telegra.ph/file/d37b343ee8f981be6ffba.jpg'; // Assign default image URL
+                } finally {
+                  let text = (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user')
+                    .replace('@group', await this.getName(id))
+                    .replace('@desc', groupMetadata.desc?.toString() || 'لايوجد وصف')
+                    .replace('@user', '@' + user.split('@')[0]);
+          
+                  let nthMember = groupMetadata.participants.length;
+                  let secondText = `اهلا ياحب, ${await this.getName(user)}, رقم ${nthMember}العضو`;
+          
+                  let welcomeApiUrl = `https://api.popcat.xyz/welcomecard?background=${encodeURIComponent(
+                    'https://telegra.ph/file/919c9aa59b8dc5cae41a8.png'
+                  )}&text1=${encodeURIComponent(
+                    await this.getName(user)
+                  )}&text2=نورت+الجروب+يحب&text3=عدد+الاعضاء:${encodeURIComponent(
+                    nthMember.toString()
+                  )}&avatar=${encodeURIComponent(pp)}`;
+          
+                  try {
+                    let welcomeResponse = await fetch(welcomeApiUrl);
+                    let welcomeBuffer = await welcomeResponse.buffer();
+          
+                    this.sendFile(id, welcomeBuffer, 'welcome.png', text, null, false, { mentions: [user] });
+                  } catch (error) {
+                    console.error(`حدث خطأ أثناء إنشاء صورة الترحيب: ${error}`);
+                  }
                 }
+              }
             }
-            break
-        case 'promote':
-            text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
-        case 'demote':
-            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg') 
-            if (!text)
-                text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
-            text = text.replace('@user', '@' + participants[0].split('@')[0])
-            if (chat.detect)    
-            this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: this.parseMention(text) })
-            //this.sendMessage(id, { text, mentions: this.parseMention(text) })
-            break
+            break;
+          
+          case 'remove':
+            if (chat.welcome) {
+              let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata;
+              for (let user of participants) {
+                let pp, ppgp;
+                try {
+                  pp = await this.profilePictureUrl(user, 'image');
+                  ppgp = await this.profilePictureUrl(id, 'image');
+                } catch (error) {
+                  console.error(`حدث خطأ أثناء استرداد الصورة الشخصية: ${error}`);
+                  pp = 'https://telegra.ph/file/d37b343ee8f981be6ffba.jpg'; // Assign default image URL
+                  ppgp = 'https://telegra.ph/file/d37b343ee8f981be6ffba.jpg'; // Assign default image URL
+                } finally {
+                  let text = (chat.sBye || this.bye || conn.bye || 'اهلا, @user')
+                    .replace('@user', '@' + user.split('@')[0]);
+          
+                  let nthMember = groupMetadata.participants.length;
+                  let secondText = `وداعا, رقم ${nthMember}عضونا`;
+          
+                  let leaveApiUrl = `https://api.popcat.xyz/welcomecard?background=${encodeURIComponent(
+                    'https://telegra.ph/file/919c9aa59b8dc5cae41a8.png'
+                  )}&text1=${encodeURIComponent(
+                    await this.getName(user)
+                  )}&text2=الي+القاء&text3=عدد+الاعضاء:${encodeURIComponent(
+                    nthMember.toString()
+                  )}&avatar=${encodeURIComponent(pp)}`;
+          
+                  try {
+                    let leaveResponse = await fetch(leaveApiUrl);
+                    let leaveBuffer = await leaveResponse.buffer();
+          
+                    this.sendFile(id, leaveBuffer, 'leave.png', text, null, false, { mentions: [user] });
+                  } catch (error) {
+                    console.error(`حدث خطأ أثناء إنشاء صورة الإجازة: ${error}`);
+                  }
+                }
+              }
+            }
+            break;
     }
 }
 
